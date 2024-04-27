@@ -19,7 +19,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
     setState(() {
       _selectedItemIndex = index;
     });
-
   }
 
   @override
@@ -106,7 +105,11 @@ class _HomeDesktopState extends State<HomeDesktop> {
                   flex: 3,
                   child: SizedBox(
                     height: 350,
-                    child: Center(child: Image.asset('images/pc.gif',height: 350,)),
+                    child: Center(
+                        child: Image.asset(
+                      'images/pc.gif',
+                      height: 350,
+                    )),
                   ),
                 ),
                 Expanded(
@@ -195,19 +198,26 @@ class _HomeDesktopState extends State<HomeDesktop> {
                   flex: 3,
                   child: SizedBox(
                     height: 350,
-                    child: Center(child: Image.asset('images/secGif.gif',height: 300,)),
+                    child: Center(
+                        child: Image.asset(
+                      'images/secGif.gif',
+                      height: 300,
+                    )),
                   ),
                 ),
               ],
             ),
-
             Row(
               children: [
                 Expanded(
                   flex: 3,
                   child: SizedBox(
                     height: 300,
-                    child: Center(child: Image.asset('images/thirdGif.gif',height: 250,)),
+                    child: Center(
+                        child: Image.asset(
+                      'images/thirdGif.gif',
+                      height: 250,
+                    )),
                   ),
                 ),
                 Expanded(
@@ -242,7 +252,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                             child: Text(
                               "In the heart of the agricultural landscape, Kenilworth stands as a beacon of innovation, transforming the way you perceive and manage the entire agriculture value chain. We take pride in being the only company that provides a holistic digital platform that seamlessly connects every link in the value chain, from farmer to consumer, coupled with state-of-the-art Agriculture Drones",
                               style:
-                              TextStyle(color: Colors.black, fontSize: 16),
+                                  TextStyle(color: Colors.black, fontSize: 16),
                             ),
                           ),
                           const DiscoverButton(),
@@ -251,7 +261,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     )),
               ],
             ),
-
             Row(
               children: [
                 Expanded(
@@ -286,7 +295,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                             child: Text(
                               "In the ever-evolving world of drone technology, scale and expertise are no longer luxuries, they're necessities. At Kenilworth International, we don't just offer drones, we offer unmatched power and precision through the country's largest fleet of cutting-edge drones and 100s of the most expertly trained pilot squad, empowering you to conquer any aerial challenge.",
                               style:
-                              TextStyle(color: Colors.black, fontSize: 16),
+                                  TextStyle(color: Colors.black, fontSize: 16),
                             ),
                           ),
                           const DiscoverButton(),
@@ -296,12 +305,95 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 Expanded(
                   flex: 3,
                   child: SizedBox(
-                    height: 350,
-                    child: Center(child: Image.asset('images/forthGif.gif',height: 300,),)
-                  ),
+                      height: 350,
+                      child: Center(
+                        child: Image.asset(
+                          'images/forthGif.gif',
+                          height: 300,
+                        ),
+                      )),
                 ),
               ],
             ),
+            const SizedBox(
+              height: 60,
+            ),
+            Center(
+              child: SizedBox(
+                width: 1040, // Adjust to the width of your design
+                height: 220, // Adjust to the height of your design
+
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Image.asset(
+                        'images/Technology.png', // Replace with your background image
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Positioned(
+                      left: 430, // Adjust the positioning as per your design
+                      bottom: 13,
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context)
+                                .pushNamed('/start'); // Handle button press
+                          },
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            backgroundColor:
+                                AppColor.flame, // Button text color
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 32, vertical: 16),
+                            minimumSize: const Size(180, 48),
+                          ),
+                          child: const Text(
+                            'REACH US >>',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 60,
+            ),
+
+            const Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Text(
+                "PARTNERING WITH INDUSTRY LEADERS",
+                style: TextStyle(
+                    fontSize: 32,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
+                "We Are Ready to Disrupt You With Our Superior Digital Experiences and Strategies Through Our Systematic Approach",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500),
+              ),
+            ),
+
+
           ],
         ),
       ),
